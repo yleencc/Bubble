@@ -3,7 +3,8 @@
 - 在文章底部添加署名 4.0 国际 (CC BY 4.0)说明
 - 网页的页脚添加网站运行时间（需要使用[SiteRunningTime](https://github.com/zhusaidong/SiteRunningTime)插件）
 - 在文章附标题添加XX次浏览的文字标识（需要使用[ViewsCounter](https://github.com/Quarkay/Typecho-ViewsCounter)插件）
-- 
+- 原本Bubble的文章内图片是默认占满一整行内容（即加了display: block;），我又把它去掉了，现在可以多张图片处在同一行了
+- ...
 
 # Bubble
 
