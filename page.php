@@ -12,6 +12,9 @@
 					<div class="row align-items-center justify-content-center">
 						<h1 class="text-white"><?php $this->title() ?></h1>
 					</div>
+					<h5 class="text-white" style="display: block;">
+                        	                <?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览
+                      	                </h5>
 				</div>
 			</div>
 		</section>

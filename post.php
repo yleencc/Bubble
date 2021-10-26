@@ -74,6 +74,9 @@ $this->need('header.php');
 				</div>
 				<div class="row align-items-center justify-content-center">
 					<h5 class="text-white">于 <time datetime="<?php $this->date('c'); ?>"><?php $this->date(); ?></time> 由 <?php $this->author(); ?> 发布</h5>
+						<h5 class="text-white" style="display: block;">
+        	                                        &nbsp;&nbsp;| <?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览
+	                                        </h5>
 				</div>
 			</div>
 		</div>
@@ -143,7 +146,13 @@ $this->need('header.php');
 							<?php
                 $this->content();
 							?>
-							<hr>
+							<hr>															<hr/>
+								<div style="padding: 1rem 1.2rem; margin-bottom: 1rem; background-color: rgba(170,170,200,0.1);">	
+		                                                <div>版权属于：月琳cc</div>
+	                                                        <div>本文链接：<?php $this->permalink(); ?></div>
+	                                                        <div>作品采用<a href="https://creativecommons.org/licenses/by/4.0/deed.zh">《知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议》</a>进行许可，转载请务必注明出处！</div>
+
+							
 							<ul>
 								<li>分类：<?php printCategory($this); ?></li>
 								<li>标签：<?php printTag($this); ?></li>
