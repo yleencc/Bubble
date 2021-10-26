@@ -1,3 +1,10 @@
+# 魔改内容
+- 加入追番、说说、分类的模板页面（需要添加独立页面的时候选择模板页面）
+- 在文章底部添加署名 4.0 国际 (CC BY 4.0)说明
+- 网页的页脚添加网站运行时间（需要使用[SiteRunningTime](https://github.com/zhusaidong/SiteRunningTime)插件）
+- 在文章附标题添加XX次浏览的文字标识（需要使用[ViewsCounter](https://github.com/Quarkay/Typecho-ViewsCounter)插件）
+- 
+
 # Bubble
 
 Typecho 清新风格响应式主题。
