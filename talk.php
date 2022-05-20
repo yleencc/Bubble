@@ -27,6 +27,11 @@ $this->need('header.php');
         background-color: #fff;
         background-clip: border-box;
     }
+    .talk-more{
+        background-color: rgba(240, 240, 240, 0.5); position: absolute; width: 100%; height: 40px; bottom: 0; text-align: center;	
+    }
+    .show{overflow: unset;}
+    .hidden{overflow: hidden; max-height:500px;}
 </style>
 <main>
     <section class="section section-lg section-hero section-shaped">
@@ -79,8 +84,11 @@ $this->need('header.php');
                                             }
                                             ?>
                                         </h5>
-                                    </div>
-                                    <?php $comments->content(); ?>
+				    </div>
+				    <div class="talk-content hidden" style="position: relative;">
+					<?php $comments->content(); ?>
+					<div class="talk-more" onclick="showMore(this)"><span>展开更多...</span></div>
+				    </div>
                                     <div style="float: right;">
                                         <?php $comments->reply('<i class="fa fa-reply" aria-hidden="true"></i> 回复'); ?>
                                     </div>
@@ -93,10 +101,9 @@ $this->need('header.php');
                             </div>
                         <?php } ?>
                     </li>
-
                 <?php } ?>
 
-                <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+		<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
                 <section class="section">
                     <div class="container" id="comments" style="padding: unset;">
                         <div class="content" style="margin-top: -15rem;">
@@ -348,4 +355,27 @@ $this->need('header.php');
             <?php endif; ?>
         </div>
     </section>
+
+<script>
+  (function() {
+    var talkMoreList = document.getElementsByClassName('talk-more');
+    for(let i = 0; i < talkMoreList.length; i++) {
+      var h = talkMoreList[i].parentNode.clientHeight;
+      if (h < 500) {
+        talkMoreList[i].style.display = 'none';
+      }
+    }
+  })();
+				function showMore(e) {
+					console.log(e.parentNode.classList);
+
+                                        e.style.display = 'none';
+					if (e.parentNode.classList.contains('hidden')) {
+					  e.parentNode.classList.remove('hidden');
+					} else
+					e.parentNode.classList.add('hidden');
+					
+				}
+
+</script>
     <?php $this->need('footer.php'); ?>
