@@ -138,7 +138,7 @@ function themeConfig($form) {
 	
 	echo 
 	'
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
 	<ul class="typecho-option typecho-option-submit">
 		<li>
 			<label class="typecho-label">
