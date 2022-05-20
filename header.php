@@ -59,7 +59,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/viewerjs/1.10.5/viewer.min.css" />
 	<?php endif; ?>
 
-	<!-- Jquery -->i
+	<!-- Jquery -->
 	<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
 
 	<!-- Custom CSS -->
