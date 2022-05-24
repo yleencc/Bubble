@@ -90,7 +90,7 @@
 	<script src="https://cdn.staticfile.org/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://cdn.staticfile.org/bootstrap/4.5.3/js/bootstrap.min.js"></script>
 	<!-- Optional plugins -->
-	<script src="https://cdn.bootcdn.net/ajax/libs/headroom/0.11.0/headroom.min.js"></script>
+	<script src="https://cdn.staticfile.org/headroom/0.11.0/headroom.min.js"></script>
 	<!-- Theme JS -->
 	<script src="<?php $this->options->themeUrl("assets/js/argon.min.js"); ?>"></script>
 	<script src="<?php $this->options->themeUrl("assets/js/bbrender.js"); ?>"></script>
