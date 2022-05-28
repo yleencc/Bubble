@@ -27,11 +27,34 @@ $this->need('header.php');
         background-color: #fff;
         background-clip: border-box;
     }
-    .talk-more{
-        background-color: rgba(240, 240, 240, 0.5); position: absolute; width: 100%; height: 40px; bottom: 0; text-align: center;	
+    img-group {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+	gap: 1.25%;
+        margin-top: .5rem;
     }
-    .show{overflow: unset;}
-    .hidden{overflow: hidden; max-height:500px;}
+    img-group br{
+	display: none;
+    }
+    img-group>item {
+        padding-top: 100%;
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #aaa;
+    }
+    img-group>item>img {
+	position: absolute;
+        margin: 0!important;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+    }
 </style>
 <main>
     <section class="section section-lg section-hero section-shaped">
@@ -87,7 +110,6 @@ $this->need('header.php');
 				    </div>
 				    <div class="talk-content hidden" style="position: relative;">
 					<?php $comments->content(); ?>
-					<div class="talk-more" onclick="showMore(this)"><span>展开更多...</span></div>
 				    </div>
                                     <div style="float: right;">
                                         <?php $comments->reply('<i class="fa fa-reply" aria-hidden="true"></i> 回复'); ?>
@@ -357,25 +379,12 @@ $this->need('header.php');
     </section>
 
 <script>
-  (function() {
-    var talkMoreList = document.getElementsByClassName('talk-more');
-    for(let i = 0; i < talkMoreList.length; i++) {
-      var h = talkMoreList[i].parentNode.clientHeight;
-      if (h < 500) {
-        talkMoreList[i].style.display = 'none';
-      }
-    }
-  })();
-				function showMore(e) {
-					console.log(e.parentNode.classList);
-
-                                        e.style.display = 'none';
-					if (e.parentNode.classList.contains('hidden')) {
-					  e.parentNode.classList.remove('hidden');
-					} else
-					e.parentNode.classList.add('hidden');
-					
-				}
-
+(function() {
+  const gallery = new Viewer(document.getElementById('comments'), {
+    filter(image) {
+      return image.className != 'avatar';
+    },
+  });
+})();
 </script>
     <?php $this->need('footer.php'); ?>
