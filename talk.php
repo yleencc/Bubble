@@ -16,6 +16,8 @@ $this->need('header.php');
             }
     "; ?>
     .content>ol.comment-list>li{
+        padding: .4rem 1rem;
+        margin: 2rem 0;
         box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07)!important;
         position: relative;
         display: flex;
@@ -26,6 +28,12 @@ $this->need('header.php');
         border-radius: .25rem;
         background-color: #fff;
         background-clip: border-box;
+    }
+    .comment-children .comment-list>li{
+        margin-left: 40px;
+    }
+    .comment-children {
+        margin-bottom: unset;
     }
     img-group {
         display: grid;
@@ -84,7 +92,7 @@ $this->need('header.php');
                     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';
                 ?>
 
-                    <li class="" style="padding: .4rem 1rem; margin: 2rem 0;" id="li-<?php $comments->theId(); ?>">
+                    <li id="li-<?php $comments->theId(); ?>">
                         <div id="<?php $comments->theId(); ?>">
                             <div class="comment-item">
                                 <div class="<?php
