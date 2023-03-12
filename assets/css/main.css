@@ -97,7 +97,7 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -389,7 +389,7 @@ h6,
     font-family: inherit;
     font-weight: 400;
     line-height: 1.5;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     color: #32325d;
 }
 
@@ -541,7 +541,7 @@ mark,
 code {
     font-size: 87.5%;
     word-break: break-word;
-    color: #f3a4b5;
+    color: #f2738e;
 }
 
 a>code {
@@ -14646,7 +14646,7 @@ textarea[resize='horizontal'] {
 
 p {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
 }
 
