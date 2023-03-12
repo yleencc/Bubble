@@ -275,6 +275,8 @@
 		}
 		init()
 	</script>
+	<!-- Hide navbar if nav item is tapped in mobile devices. -->
+	<script>$("#navbar-default ul>li.nav-item").click(()=> {$("#navbar-default").collapse("hide")});</script>
 	<!-- Typecho footer -->
 	<?php $this->footer(); ?>
 	</body>
